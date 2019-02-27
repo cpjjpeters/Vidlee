@@ -23,7 +23,7 @@ namespace Vidlee
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-cerulean.css", //-minty
+                      "~/Content/bootstrap.css", //-minty
                       "~/Content/site.css"));
         }
     }
