@@ -1,0 +1,23 @@
+﻿@Model List<Customer>
+@{
+    ViewBag.Title = "Overview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Overview</h2>
+<ul>
+    @foreach (var customer in Model)  //var customer in Model.Customers
+    {
+         //li>@customer.Name</li>
+         <li>
+             
+             @Html.ActionLink("View Customers","Details","Customer", new { id = customer.Id },null)
+         </li>
+
+
+        // er moet nog aan gewerkt worden want nu niet correct
+        //<li>@Html.ActionLink("View Customerss", "Details", "Customer", new { id = customer.ID });</li>
+        // <a href="@Url.Action("Details","Customer",customer.id)" class="elements"><span>@customer.Name, @customer.Id</span></a>
+    }
+</ul>
+
